@@ -1,8 +1,8 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
 carpentry: "lc"    # what kind of Carpentry (must be either "lc" or "dc" or "swc")
-venue: "FIXME"        # brief name of host site without address (e.g., "Euphoric State University")
-address: "FIXME"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
+venue: "SUB Hamburg"        # brief name of host site without address (e.g., "Euphoric State University")
+address: "Raum AB003, Von-Melle-Park 3, 20146 Hamburg"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
 country: "de"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
 language: "FIXME"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
 latlng: "FIXME"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
