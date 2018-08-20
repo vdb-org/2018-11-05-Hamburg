@@ -292,7 +292,7 @@ collaborative_notes: https://hackmd.io/v-WTCLstSiCJAGnaD1XZMQ?both            # 
       <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
       <ol>
         <li>Download the Git for Windows <a href="https://git-for-windows.github.io/">installer</a>.</li>
-        <li>Run the installer and follow the steps bellow:
+        <li>Run the installer and follow the steps below:
           <ol>
             {% comment %} Git 2.18.0 Setup {% endcomment %}
             <li>
