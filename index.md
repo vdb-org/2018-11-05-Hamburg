@@ -32,7 +32,7 @@ If you are running a self-organized workshop or have not put in a workshop reque
 <a href="{{site.amy_site}}/submit">this workshop request form</a> to let us know about your workshop
 and our administrator may contact you if we need any extra information.</h4>
 
-<h2 id="general">Allgemeine Informationen</h2>
+<h2 id="general">General Information</h2>
 
 {% comment %}
   INTRODUCTION
@@ -72,11 +72,11 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endcomment %}
 {% if page.latlng %}
 <p id="where">
-  <strong>Wo:</strong>
+  <strong>Where:</strong>
   {{page.address}}.
-  Wegbeschreibung mit
+  Get directions with
   <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
-  oder
+  or
   <a href="//maps.google.com/maps?q={{page.latlng}}">Google Maps</a>.
 </p>
 {% endif %}
@@ -88,7 +88,7 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endcomment %}
 {% if page.humandate %}
 <p id="when">
-  <strong>Wann:</strong>
+  <strong>When:</strong>
   {{page.humandate}}.
   {% include workshop_calendar.html %}
 </p>
@@ -100,17 +100,18 @@ and our administrator may contact you if we need any extra information.</h4>
   Modify the block below if there are any special requirements.
 {% endcomment %}
 <p id="requirements">
-  <strong>Voraussetzungen:</strong> Die Teilnehmer*innen müssen einen Laptop mit einem Mac-, Linux- oder Windows-Betriebssystem (kein Tablett, Chromebook usw.) mitbringen, auf dem sie über Administratorrechte verfügen.
-  Sie sollten einige spezielle Softwarepakete installiert haben (siehe <a href="#setup">unten</a>). 
-  Sie sind außerdem verpflichtet, sich an den <a href="{{site.swc_site}}/conduct.html">Verhaltenskodex</a> von 
+  <strong>Requirements:</strong> Participants must bring a laptop with a
+  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges
+  on. They should have a few specific software packages installed (listed
+  <a href="#setup">below</a>). They are also required to abide by
   {% if page.carpentry == "swc" %}
-  Software Carpentry
+  Software Carpentry's
   {% elsif page.carpentry == "dc" %}
-  Data Carpentry
+  Data Carpentry's
   {% elsif page.carpentry == "lc" %}
-  Library Carpentry
+  Library Carpentry's
   {% endif %}
-  zu halten.
+  <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
 </p>
 
 {% comment %}
@@ -120,15 +121,21 @@ and our administrator may contact you if we need any extra information.</h4>
   special instructions.
 {% endcomment %}
 <p id="accessibility">
-  <strong>Barrierefreiheit:</strong> Wir setzen uns dafür ein, diesen Workshop für alle zugänglich zu machen.
-  Die Organisatoren des Workshops haben überprüft, dass:
+  <strong>Accessibility:</strong> We are committed to making this workshop
+  accessible to everybody.
+  The workshop organizers have checked that:
 </p>
 <ul>
-  <li>der Raum mit einem Rollstuhl erreichbar ist</li>
-  <li>behindertengerechte Toiletten vorhanden sind</li>
+  <li>The room is wheelchair / scooter accessible.</li>
+  <li>Accessible restrooms are available.</li>
 </ul>
 <p>
-  Die Materialien werden im Vorfeld des Workshops zur Verfügung gestellt und bei Bedarf sind großformatige Handzettel nach vorheriger Anmeldung bei den Veranstaltern erhältlich.  Wenn wir Ihnen das Lernen erleichtern können (z.B. durch Gebärdensprachdolmetscher, Stillräume), setzen Sie sich bitte mit uns in Verbindung (Kontaktdaten siehe unten) und wir werden versuchen, Ihnen diese zur Verfügung zu stellen.
+  Materials will be provided in advance of the workshop and
+  large-print handouts are available if needed by notifying the
+  organizers in advance.  If we can help making learning easier for
+  you (e.g. sign-language interpreters, lactation facilities) please
+  get in touch (using contact details below) and we will
+  attempt to provide them.
 </p>
 
 {% comment %}
@@ -137,8 +144,8 @@ and our administrator may contact you if we need any extra information.</h4>
   Display the contact email address set in the configuration file.
 {% endcomment %}
 <p id="contact">
-  <strong>Kontakt</strong>:
-  Bitte senden Sie eine E-Mail an
+  <strong>Contact</strong>:
+  Please email
   {% if page.email %}
     {% for email in page.email %}
       {% if forloop.last and page.email.size > 1 %}
@@ -151,9 +158,9 @@ and our administrator may contact you if we need any extra information.</h4>
       <a href='mailto:{{email}}'>{{email}}</a>
     {% endfor %}
   {% else %}
-    [wird noch bekannt gegeben]
+    to-be-announced
   {% endif %}
-  für weitere Informationen.
+  for more information.
 </p>
 
 <hr/>
@@ -161,17 +168,17 @@ and our administrator may contact you if we need any extra information.</h4>
 {% comment %} 
  SURVEYS - DO NOT EDIT SURVEY LINKS 
 {% endcomment %}
-<h2 id="surveys">Umfragen</h2>
-<p>Bitte füllen Sie diese Umfragen vor und nach dem Workshop aus.</p>
+<h2 id="surveys">Surveys</h2>
+<p>Please be sure to complete these surveys before and after the workshop.</p>
 {% if site.carpentry == "swc" %} 
-<p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Umfrage vor dem Workshop</a></p>
-<p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Umfrage nach dem Workshop</a></p>
+<p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
+<p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
 {% elsif site.carpentry == "dc" %}
-<p><a href="{{ site.dc_pre_survey }}{{ site.github.project_title }}">Umfrage vor dem Workshop</a></p>
-<p><a href="{{ site.dc_post_survey }}{{ site.github.project_title }}">Umfrage nach dem Workshop</a></p>
+<p><a href="{{ site.dc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
+<p><a href="{{ site.dc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
 {% elsif site.carpentry == "lc" %}
-<p><a href="{{ site.lc_pre_survey }}{{ site.github.project_title }}">Umfrage vor dem Workshop</a></p>
-<p><a href="{{ site.lc_post_survey }}{{ site.github.project_title }}">Umfrage nach dem Workshop</a></p>
+<p><a href="{{ site.lc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
+<p><a href="{{ site.lc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
 {% endif %}
 
 <hr/>
@@ -184,7 +191,7 @@ and our administrator may contact you if we need any extra information.</h4>
   to match your plans.  You may also want to change 'Day 1' and 'Day
   2' to be actual dates or days of the week.
 {% endcomment %}
-<h2 id="schedule">Zeitplan</h2>
+<h2 id="schedule">Schedule</h2>
 
 {% if page.carpentry == "swc" %}
   {% include sc/schedule.html %}
@@ -206,7 +213,7 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endcomment %}
 {% if page.collaborative_notes %}
 <p id="collaborative_notes">
-  Wir werden dieses <a href="{{page.collaborative_notes}}">kollaborative Dokument</a> zum Chatten, Notieren und Teilen von URLs und Code-Bits verwenden.
+  We will use this <a href="{{page.collaborative_notes}}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
 </p>
 {% endif %}
 
@@ -256,7 +263,7 @@ and our administrator may contact you if we need any extra information.</h4>
 <h2 id="setup">Setup</h2>
 
 <p>
-  Um an einem
+  To participate in a
   {% if page.carpentry == "swc" %}
   Software Carpentry
   {% elsif page.carpentry == "dc" %}
@@ -264,18 +271,22 @@ and our administrator may contact you if we need any extra information.</h4>
   {% elsif page.carpentry == "lc" %}
   Library Carpentry
   {% endif %}
-  Workshop teilnehmen zu können, benötigen Sie Zugriff auf die unten beschriebene Software. Zusätzlich benötigen Sie einen aktuellen Webbrowser.
+  workshop,
+  you will need access to the software described below.
+  In addition, you will need an up-to-date web browser.
 </p>
 <p>
-  Wir führen eine Liste der häufigsten Probleme, die während der Installation auftreten können, auf der
-  <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Wiki-Seite Konfigurationsprobleme und Lösungen</a> (als Referenz für Instruktoren).
+  We maintain a list of common issues that occur during installation as a reference for instructors
+  that may be useful on the
+  <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
 </p>
 
 <div id="shell"> {% comment %} Start of 'shell' section. {% endcomment %}
-  <h3>Die Bash-Shell</h3>
+  <h3>The Bash Shell</h3>
 
   <p>
-    Bash ist eine häufig verwendete Shell, die Ihnen die Möglichkeit gibt, einfache Aufgaben schneller zu erledigen.
+    Bash is a commonly-used shell that gives you the power to do simple
+    tasks more quickly.
   </p>
 
   <div class="row">
@@ -283,66 +294,80 @@ and our administrator may contact you if we need any extra information.</h4>
       <h4 id="shell-windows">Windows</h4>
       <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
       <ol>
-        <li>Laden Sie den <a href="https://git-for-windows.github.io/">Git for Windows Installer</a> herunter.</li>
-        <li>Führen Sie das Installationsprogramm aus und befolgen Sie die folgenden Schritte:
+        <li>Download the Git for Windows <a href="https://git-for-windows.github.io/">installer</a>.</li>
+        <li>Run the installer and follow the steps bellow:
           <ol>
             {% comment %} Git 2.18.0 Setup {% endcomment %}
             <li>
-                Klicken Sie viermal auf "Weiter" (zweimal, wenn Sie zuvor Git installiert haben). Sie müssen in den Dialogfenstern "Informationen", "Standort", "Komponenten" und "Startmenü" nichts ändern.
+                Click on "Next" four times (two times if you've previously
+                installed Git).  You don't need to change anything
+                in the Information, location, components, and start menu screens.
             </li>
             <li>
                 <strong>
-                Wählen Sie "Standardmäßig den Nano-Editor verwenden" und klicken Sie auf "Weiter".
+                Select “Use the nano editor by default” and click on “Next”.
                 </strong>
             </li>
             {% comment %} Adjusting your PATH environment {% endcomment %}
             <li>
-                Lassen Sie "Git in der Windows-Eingabeaufforderung verwenden" ausgewählt und klicken Sie auf "Next". Wenn Sie dies vergessen, werden die Programme, die Sie für den Workshop benötigen, nicht richtig funktionieren. Führen Sie in diesem Fall den Installer erneut aus und wählen Sie die entsprechende Option.
+                Keep "Use Git from the Windows Command Prompt" selected and click on "Next".
+                If you forgot to do this programs that you need for the workshop will not work properly.
+                If this happens rerun the installer and select the appropriate option.
             </li>
             {% comment %} Choosing the SSH executable {% endcomment %}
-            <li>Klicken Sie auf "Weiter".</li>
+            <li>Click on "Next".</li>
             {% comment %} Configuring the line ending conversions {% endcomment %}
             <li>
-                Lassen Sie "Auschecken im Windows-Stil, Zeilenenden im Unix-Stil übertragen" ausgewählt und klicken Sie auf "Weiter".
+                Keep "Checkout Windows-style, commit Unix-style line endings" selected and click on "Next".
             </li>
             {% comment %} Configuring the terminal emulator to use with Git Bash {% endcomment %}
             <li>
               <strong>
-                Wählen Sie "Standardkonsolenfenster von Windows verwenden" und klicken Sie auf "Weiter".
+                Select "Use Windows' default console window" and click on "Next".
               </strong>
             </li>
             {% comment %} Configuring experimental performance tweaks {% endcomment %}
-            <li>Klicken Sie auf "Installieren".</li>
+            <li>Click on "Install".</li>
             {% comment %} Installing {% endcomment %}
             {% comment %} Completing the Git Setup Wizard {% endcomment %}
-            <li>Klicken Sie auf "Fertig stellen".</li>
+            <li>Click on "Finish".</li>
           </ol>
         </li>
         <li>
-          Wenn Ihre Umgebungsvariable "HOME" nicht gesetzt ist (oder Sie wissen nicht, was das ist):
+          If your "HOME" environment variable is not set (or you don't know what this is):
           <ol>
-            <li>Öffnen Sie die Eingabeaufforderung (Öffnen Sie das Startmenü, geben Sie cmd ein und drücken Sie [Enter]).</li>
+            <li>Open command prompt (Open Start Menu then type <code>cmd</code> and press [Enter])</li>
             <li>
-              Geben Sie die folgende Zeile genau so in das Eingabeaufforderungsfenster ein:
+              Type the following line into the command prompt window exactly as shown:
               <p><code>setx HOME "%USERPROFILE%"</code></p>
             </li>
-            <li>Drücken Sie [Enter], Sie sollten folgendes sehen <code>SUCCESS: Specified value was saved.</code></li>
-            <li>Beenden Sie die Eingabeaufforderung, indem Sie exit eingeben und dann [Enter] drücken.</li>
+            <li>Press [Enter], you should see <code>SUCCESS: Specified value was saved.</code></li>
+            <li>Quit command prompt by typing <code>exit</code> then pressing [Enter]</li>
           </ol>
         </li>
       </ol>
-      <p>Dadurch erhalten Sie sowohl Git als auch Bash (im Git Bash Programm).</p>
+      <p>This will provide you with both Git and Bash in the Git Bash program.</p>
     </div>
     <div class="col-md-4">
       <h4 id="shell-macosx">macOS</h4>
       <p>
-        Die Standard-Shell in allen Versionen von macOS ist Bash, es besteht also keine Notwendigkeit, etwas zu installieren. Sie erreichen Bash über das Terminal (zu finden unter <code>/Anwendungen/Dienstprogramme</code>). Im <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">Video-Tutorial</a> zur Git-Installation finden Sie ein Beispiel zum Öffnen des Terminals. Vielleicht möchten Sie das Terminal für diesen Workshop in Ihrem Dock behalten.
+        The default shell in all versions of macOS is Bash, so no
+        need to install anything.  You access Bash from the Terminal
+        (found in
+        <code>/Applications/Utilities</code>).
+        See the Git installation <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
+        for an example on how to open the Terminal.
+        You may want to keep
+        Terminal in your dock for this workshop.
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="shell-linux">Linux</h4>
       <p>
-        Die Standard-Shell ist normalerweise Bash, aber wenn Ihre Maschine anders eingerichtet ist, können Sie sie ausführen, indem Sie ein Terminal öffnen und <code>bash</code> eingeben. Es besteht keine Notwendigkeit, etwas zu installieren.
+        The default shell is usually Bash, but if your
+        machine is set up differently you can run it by opening a
+        terminal and typing <code>bash</code>.  There is no need to
+        install anything.
       </p>
     </div>
   </div>
@@ -352,30 +377,56 @@ and our administrator may contact you if we need any extra information.</h4>
            is given at https://help.github.com/articles/supported-browsers/{% endcomment %}
   <h3>Git</h3>
   <p>
-    Git ist ein Versionskontrollsystem, mit dem Sie verfolgen können, wer wann welche Änderungen vorgenommen hat, und mit dem Sie auf einfache Weise eine freigegebene oder öffentliche Version Ihres Codes auf <a href="https://github.com/">github.com</a> aktualisieren können. Sie benötigen einen <a href="https://help.github.com/articles/supported-browsers/">unterstützten</a> Webbrowser (aktuelle Versionen von Chrome, Firefox oder Safari, oder Internet Explorer Version 9 oder höher).
+    Git is a version control system that lets you track who made changes
+    to what when and has options for easily updating a shared or public
+    version of your code
+    on <a href="https://github.com/">github.com</a>. You will need a
+    <a href="https://help.github.com/articles/supported-browsers/">supported</a>
+    web browser (current versions of Chrome, Firefox or Safari,
+    or Internet Explorer version 9 or above).
   </p>
   <p>
-    Sie benötigen einen Account bei <a href="https://github.com/">github.com</a> für Teile der Git-Lektion. Einfache GitHub-Konten sind kostenlos. Wir empfehlen Ihnen, einen GitHub-Account zu erstellen, falls Sie noch keinen haben. Bitte bedenken Sie, welche persönlichen Informationen Sie preisgeben möchten. Zum Beispiel können Sie diese <a href="https://help.github.com/articles/keeping-your-email-address-private/">Anleitung</a> lesen, um Ihre E-Mail-Adresse bei GitHub geheim zu halten.
+    You will need an account at <a href="https://github.com/">github.com</a>
+    for parts of the Git lesson. Basic GitHub accounts are free. We encourage
+    you to create a GitHub account if you don't have one already.
+    Please consider what personal information you'd like to reveal. For
+    example, you may want to review these
+    <a href="https://help.github.com/articles/keeping-your-email-address-private/">instructions
+    for keeping your email address private</a> provided at GitHub.
   </p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="git-windows">Windows</h4>
       <p>
-        Git sollte als Teil der Bash-Installation (wie oben beschrieben) auf Ihrem Computer installiert werden.
+        Git should be installed on your computer as part of your Bash
+        install (described above).
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="git-macosx">macOS</h4>
       <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">Video Tutorial</a>
       <p>
-        <strong>Für OS X 10.9 und höher</strong> installieren Sie Git for Mac, indem Sie den neuesten "mavericks" Installer aus dieser <a href="http://sourceforge.net/projects/git-osx-installer/files/">Liste</a> herunterladen und ausführen. Da dieses Installationsprogramm nicht vom Entwickler signiert ist, müssen Sie möglicherweise mit der rechten Maustaste auf die .pkg-Datei klicken, auf Öffnen klicken und im Popup-Fenster auf Öffnen klicken. Nach der Installation von Git befindet sich nichts im Ordner <code>/Anwendungen</code>, da Git ein Kommandozeilenprogramm ist. Für ältere Versionen von OS X (10.5-10.8) verwenden Sie den neuesten verfügbaren Installer mit der Bezeichnung "snow-leopard".
+        <strong>For OS X 10.9 and higher</strong>, install Git for Mac
+        by downloading and running the most recent "mavericks" installer from
+        <a href="http://sourceforge.net/projects/git-osx-installer/files/">this list</a>.
+        Because this installer is not signed by the developer, you may have to
+        right click (control click) on the .pkg file, click Open, and click
+        Open on the pop up window. 
+        After installing Git, there will not be anything in your <code>/Applications</code> folder,
+        as Git is a command line program.
+        <strong>For older versions of OS X (10.5-10.8)</strong> use the
+        most recent available installer labelled "snow-leopard"
+        <a href="http://sourceforge.net/projects/git-osx-installer/files/">available here</a>.
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="git-linux">Linux</h4>
       <p>
-        Wenn Git nicht bereits auf Ihrem Rechner vorhanden ist, können Sie versuchen, es über den Paketmanager Ihrer Distribution zu installieren. Für Debian/Ubuntu führen Sie <code>sudo apt-get install git</code> und für Fedora <code>sudo dnf install git</code> aus.
+        If Git is not already available on your machine you can try to
+        install it via your distro's package manager. For Debian/Ubuntu run
+        <code>sudo apt-get install git</code> and for Fedora run
+        <code>sudo dnf install git</code>.
       </p>
     </div>
   </div>
@@ -385,38 +436,56 @@ and our administrator may contact you if we need any extra information.</h4>
   <h3>Text Editor</h3>
 
   <p>
-    Wenn Sie Code schreiben, ist es schön, einen Texteditor zu haben, der für das Schreiben von Code optimiert ist, mit Funktionen wie der automatischen Farbcodierung von Schlüsselwörtern. Der Standardtext-Editor unter MacOS und Linux ist normalerweise auf Vim eingestellt, was nicht gerade für seine Intuitivität bekannt ist. Wenn Sie versehentlich darin stecken bleiben, versuchen Sie es mit der Escape-Taste, gefolgt von <code>:q!</code> (Doppelpunkt, Kleinbuchstabe 'q', Ausrufezeichen), und drücken Sie dann Return, um zur Shell zurückzukehren.
+    When you're writing code, it's nice to have a text editor that is
+    optimized for writing code, with features like automatic
+    color-coding of key words.  The default text editor on macOS and
+    Linux is usually set to Vim, which is not famous for being
+    intuitive.  If you accidentally find yourself stuck in it, try
+    typing the escape key, followed by <code>:q!</code> (colon, lower-case 'q',
+    exclamation mark), then hitting Return to return to the shell.
   </p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="editor-windows">Windows</h4>
       <p>
-        nano ist ein Standard-Editor, der von den Instruktoren im Workshop verwendet wird. 
-        Es wird zusammen mit Git installiert.
+        nano is a basic editor and the default that instructors use in the workshop.
+        It is installed along with Git.
       </p>
       <p>
-        Andere Editoren, die Sie verwenden können, sind <a href="https://notepad-plus-plus.org/">Notepad++</a> oder <a href="https://www.sublimetext.com/">Sublime Text</a>. Beachten Sie, dass Sie das Installationsverzeichnis zu Ihrem Systempfad hinzufügen müssen. Bitten Sie Ihren Trainer, Ihnen dabei zu helfen.
+        Others editors that you can use are
+        <a href="https://notepad-plus-plus.org/">Notepad++</a> or
+        <a href="https://www.sublimetext.com/">Sublime Text</a>.
+        <strong>Be aware that you must
+          add its installation directory to your system path.</strong>
+        Please ask your instructor to help you do this.
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="editor-macosx">macOS</h4>
       <p>
-        nano ist ein Standard-Editor, der von den Instruktoren im Workshop verwendet wird. 
-        Im <a href="https://www.youtube.com/watch?v=9LQhwETCdwY">Video-Tutorial</a> zur Installation von Git finden Sie ein Beispiel zum Öffnen von nano. Es sollte vorinstalliert sein.
+        nano is a basic editor and the default that instructors use in the workshop.
+        See the Git installation <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
+        for an example on how to open nano.
+        It should be pre-installed.
       </p>
       <p>
-        Andere Editoren, die Sie verwenden können, sind <a href="https://www.barebones.com/products/textwrangler/">Text Wrangler</a> oder <a href="https://www.sublimetext.com/">Sublime Text</a>.
+        Others editors that you can use are
+        <a href="https://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
+        <a href="https://www.sublimetext.com/">Sublime Text</a>.
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="editor-linux">Linux</h4>
       <p>
-        nano ist ein Standard-Editor, der von den Instruktoren im Workshop verwendet wird.
-        Es sollte vorinstalliert sein.
+        nano is a basic editor and the default that instructors use in the workshop.
+        It should be pre-installed.
       </p>
       <p>
-        Andere Editoren, die Sie verwenden können, sind <a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a>, <a href="https://kate-editor.org/">Kate</a> oder <a href="https://www.sublimetext.com/">Sublime Text</a>.
+        Others editors that you can use are
+        <a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a>,
+        <a href="https://kate-editor.org/">Kate</a> or
+        <a href="https://www.sublimetext.com/">Sublime Text</a>.
       </p>
     </div>
   </div>
@@ -425,42 +494,46 @@ and our administrator may contact you if we need any extra information.</h4>
 <div id="openrefine"> {% comment %} Start of 'OpenRefine' section. {% endcomment %}
   <h3>OpenRefine</h3>
   <p>
-    Für diese Lektion benötigen Sie OpenRefine und einen Webbrowser. <em>Hinweis:</em> OpenRefine ist ein Java-Programm, das auf Ihrem Rechner läuft (nicht in der Cloud). Es läuft innerhalb eines Webbrowsers, aber es wird keine Webverbindung benötigt.
+    For this lesson you will need <em>OpenRefine</em> and a
+    web browser. <em>Note:</em> this is a Java program that runs on your machine (not in the cloud).
+    It runs inside a web browser, but no web connection is needed.
   </p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="openrefine-windows">Windows</h4>
       <p>
-        Überprüfen Sie, ob Sie entweder den Firefox- oder den Chrome-Browser installiert und als Standardbrowser eingestellt haben. <strong>OpenRefine läuft in Ihrem Standardbrowser.</strong> Es wird im Internet Explorer nicht korrekt ausgeführt.
+        Check that you have either the Firefox or the Chrome browser installed and set as your default browser.
+        <strong>OpenRefine runs in your default browser.</strong>
+        It will not run correctly in Internet Explorer.
       </p>
-      <p>Laden Sie die Software von <a href="http://openrefine.org/">http://openrefine.org/</a> herunter.</p>
-      <p>Erstellen Sie ein neues Verzeichnis namens OpenRefine.</p>
-      <p>Entpacken Sie die heruntergeladene Datei in das OpenRefine-Verzeichnis, indem Sie mit der rechten Maustaste klicken und "Extrahieren...." wählen.</p>
-      <p>Wechseln Sie in Ihr neu erstelltes OpenRefine-Verzeichnis.</p>
-      <p>Starten Sie OpenRefine, indem Sie auf <code>google-refine.exe</code> klicken (dies öffnet ein Eingabeaufforderungsfenster, das Sie aber ignorieren können - warten Sie einfach, bis sich OpenRefine im Browser öffnet).</p>
-      <p>Wenn Sie einen anderen Browser verwenden oder wenn OpenRefine nicht automatisch für Sie geöffnet wird, geben Sie in Ihrem Browser die Adresse <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> oder <a href="http://localhost:3333">http://localhost:3333</a>, um das Programm zu verwenden.</p>
+      <p>Download software from <a href="http://openrefine.org/">http://openrefine.org/</a></p>
+      <p>Create a new directory called OpenRefine.</p>
+      <p>Unzip the downloaded file into the OpenRefine directory by right-clicking and selecting "Extract ...". </p>
+      <p>Go to your newly created OpenRefine directory.</p>
+      <p>Launch OpenRefine by clicking <code>google-refine.exe</code> (this will launch a command prompt window, but you can ignore that - just wait for OpenRefine to open in the browser).</p>
+      <p>If you are using a different browser, or if OpenRefine does not automatically open for you, point your browser at <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> or <a href="http://localhost:3333">http://localhost:3333</a> to use the program.</p>
     </div>
     <div class="col-md-4">
       <h4 id="openrefine-mac">Mac</h4>
-      <p>Überprüfen Sie, ob Sie entweder den Firefox- oder den Chrome-Browser installiert und als Standardbrowser eingestellt haben. <strong>OpenRefine läuft in Ihrem Standardbrowser.</strong> Möglicherweise läuft es in Safari nicht richtig.</p>
-      <p>Laden Sie die Software von <a href="http://openrefine.org/">http://openrefine.org/</a> herunter.</p>
-      <p>Erstellen Sie ein neues Verzeichnis namens OpenRefine.</p>
-      <p>Entpacken Sie die heruntergeladene Datei mit einem Doppelklick in das OpenRefine-Verzeichnis.</p>
-      <p>Wechseln Sie in Ihr neu erstelltes OpenRefine-Verzeichnis.</p>
-      <p>Starten Sie OpenRefine, indem Sie das Symbol in den Ordner Programme ziehen.</p>
-      <p>Verwenden Sie <code>Strg-Klick/Öffnen ... </code>, um es zu starten.</p>
-      <p>Wenn Sie einen anderen Browser verwenden oder wenn OpenRefine nicht automatisch für Sie geöffnet wird, geben Sie in Ihrem Browser die Adresse <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> oder <a href="http://localhost:3333">http://localhost:3333</a>, um das Programm zu verwenden.</p>
+      <p>Check that you have either the Firefox or the Chrome browser installed and set as your default browser. <strong>OpenRefine runs in your default browser.</strong> It may not run correctly in Safari.</p>
+      <p>Download software from <a href="http://openrefine.org/">http://openrefine.org/</a>.</p>
+      <p>Create a new directory called OpenRefine.</p>
+      <p>Unzip the downloaded file into the OpenRefine directory by double-clicking it.</p>
+      <p>Go to your newly created OpenRefine directory.</p>
+      <p>Launch OpenRefine by dragging the icon into the Applications folder.</p>
+      <p>Use <code>Ctrl-click/Open ... </code> to launch it.</p>
+      <p>If you are using a different browser, or if OpenRefine does not automatically open for you, point your browser at <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> or <a href="http://localhost:3333">http://localhost:3333</a> to use the program.</p>
     </div>
     <div class="col-md-4">
       <h4 id="openrefine-linux">Linux</h4>
-      <p>Überprüfen Sie, ob Sie entweder den Firefox- oder den Chrome-Browser installiert und als Standardbrowser eingestellt haben. <strong>OpenRefine läuft in Ihrem Standardbrowser.</strong></p>
-      <p>Laden Sie die Software von <a href="http://openrefine.org/">http://openrefine.org/</a> herunter.</p>
-      <p>Erstellen Sie ein neues Verzeichnis namens OpenRefine.</p>
-      <p>Entpacken Sie die heruntergeladene Datei in das OpenRefine-Verzeichnis.</p>
-      <p>Wechseln Sie in Ihr neu erstelltes OpenRefine-Verzeichnis.</p>
-      <p>Starten Sie OpenRefine, indem Sie <code>./refine</code> in das Terminal im OpenRefine-Verzeichnis eingeben.</p>
-      <p>Wenn Sie einen anderen Browser verwenden oder wenn OpenRefine nicht automatisch für Sie geöffnet wird, geben Sie in Ihrem Browser die Adresse <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> oder <a href="http://localhost:3333">http://localhost:3333</a>, um das Programm zu verwenden.</p>
+      <p>Check that you have either the Firefox or the Chrome browser installed and set as your default browser. <strong>OpenRefine runs in your default browser.</strong></p>
+      <p>Download software from <a href="http://openrefine.org/">http://openrefine.org/</a>.</p>
+      <p>Make a directory called OpenRefine.</p>
+      <p>Unzip the downloaded file into the OpenRefine directory.</p>
+      <p>Go to your newly created OpenRefine directory.</p>
+      <p>Launch OpenRefine by entering <code>./refine</code> into the terminal within the OpenRefine directory.</p>
+      <p>If you are using a different browser, or if OpenRefine does not automatically open for you, point your browser at <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> or <a href="http://localhost:3333">http://localhost:3333</a> to use the program.</p>
     </div>
   </div>
 </div> {% comment %} End of 'OpenRefine' section. {% endcomment %}
