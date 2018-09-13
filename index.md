@@ -29,6 +29,8 @@ collaborative_notes:             # optional: URL for the workshop collaborative 
 
 <h2 id="general">General Information</h2>
 
+<p><strong>Dieser Workshop wird auf Deutsch durchgeführt.</strong></p>
+
 {% comment %}
   INTRODUCTION
 
